@@ -13,10 +13,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v6
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v6
       with:
         java-version: '17'
         distribution: 'temurin'
@@ -40,7 +40,7 @@ jobs:
       # Этот шаг пропустится, если секреты не настроены, и будет использована тестовая подпись
 
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v6
       with:
         name: WindYM-Release
         path: ${{steps.sign_app.outputs.signedReleaseFile || 'app/build/outputs/apk/release/app-release.apk'}}
