@@ -39,7 +39,7 @@ jobs:
       # Этот шаг пропустится, если секреты не настроены, и будет использована тестовая подпись
 
     - name: Upload APK Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v6
       with:
         name: WindYM-Release
         path: ${{steps.sign_app.outputs.signedReleaseFile || 'app/build/outputs/apk/release/*.apk'}}
