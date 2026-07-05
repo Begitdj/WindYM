@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout code
@@ -36,8 +38,19 @@ jobs:
         keyPassword: ${{ secrets.KEY_PASSWORD }}
       # Этот шаг пропустится, если секреты не настроены, и будет использована тестовая подпись
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v6
+    - name: Upload APK Artifact
+      uses: actions/upload-artifact@v3
       with:
         name: WindYM-Release
-        path: ${{steps.sign_app.outputs.signedReleaseFile || 'app/build/outputs/apk/release/app-release.apk'}}
+        path: ${{steps.sign_app.outputs.signedReleaseFile || 'app/build/outputs/apk/release/*.apk'}}
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      if: github.ref == 'refs/heads/main'
+      with:
+        tag_name: latest
+        name: Последняя сборка (Latest)
+        body: Автоматическая сборка приложения WindYM
+        files: ${{steps.sign_app.outputs.signedReleaseFile || 'app/build/outputs/apk/release/*.apk'}}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
