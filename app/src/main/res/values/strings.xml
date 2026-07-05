@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WindYM</string>
+    <string name="auth_title">Войти в Яндекс Музыку</string>
+    <string name="auth_subtitle">Введите OAuth-токен для доступа</string>
+    <string name="hint_token">Ваш OAuth токен (y0_Ag...)</string>
+    <string name="btn_login">Войти</string>
+    <string name="btn_open_browser">Получить токен в браузере</string>
+    <string name="btn_browser_hint">Браузер → скопируйте access_token из URL</string>
+    <string name="nav_search">Поиск</string>
+    <string name="nav_favorites">Избранное</string>
+    <string name="nav_playlists">Плейлисты</string>
+    <string name="nav_wave">Моя волна</string>
+    <string name="search_hint">Поиск треков, исполнителей…</string>
+    <string name="loading">Загрузка…</string>
+    <string name="error_auth">Ошибка аутентификации</string>
+    <string name="error_network">Ошибка сети</string>
+    <string name="no_results">Ничего не найдено</string>
+    <string name="now_playing">Сейчас играет</string>
+    <string name="player_notification_channel">Воспроизведение</string>
+    <string name="player_notification_channel_desc">Управление воспроизведением музыки</string>
+    <string name="like">Нравится</string>
+    <string name="unlike">Убрать отметку</string>
+    <string name="download">Скачать</string>
+    <string name="tracks_count">%d треков</string>
+    <string name="settings">Настройки</string>
+    <string name="logout">Выйти</string>
+    <string name="track_duration" formatted="false">%d:%02d</string>
+    <string name="unknown_artist">Неизвестный исполнитель</string>
+    <string name="unknown_album">Неизвестный альбом</string>
+    <string name="my_wave">Моя волна</string>
+    <string name="wave_loading">Запуск Моей волны…</string>
+    <string name="pref_save_token">Сохранять токен</string>
+    <string name="pref_device_id">ID устройства</string>
+</resources>

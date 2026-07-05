@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Round launcher icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Round background -->
+    <path android:fillColor="#FFE53935"
+        android:pathData="M54,4C26.4,4 4,26.4 4,54s22.4,50 50,50s50,-22.4 50,-50S81.6,4 54,4z"/>
+    <!-- Music note white -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M54,28v30.17c-1.65,-0.97 -3.56,-1.57 -5.6,-1.57C42.14,56.6 38,60.74 38,65.97s4.14,9.37 9.37,9.37s9.37,-4.14 9.37,-9.37V44.4H68V28H54z"/>
+</vector>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand colors (Holo Blue) -->
+    <color name="brand_red">#FF33B5E5</color>
+    <color name="brand_red_light">#FF73D5F5</color>
+    <color name="brand_red_dark">#FF0099CC</color>
+
+    <!-- Background (Holo Dark) -->
+    <color name="bg_primary">#FF000000</color>
+    <color name="bg_secondary">#FF111111</color>
+    <color name="bg_surface">#FF222222</color>
+    <color name="bg_card">#FF1A1A1A</color>
+    <color name="bg_elevated">#FF333333</color>
+
+    <!-- Text (Holo) -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#CCCCCC</color>
+    <color name="text_disabled">#888888</color>
+    <color name="text_on_brand">#FFFFFF</color>
+
+    <!-- Divider / stroke -->
+    <color name="divider">#333333</color>
+    <color name="stroke">#444444</color>
+
+    <!-- Status -->
+    <color name="success">#FF4CAF50</color>
+    <color name="error">#FFE53935</color>
+
+    <!-- Player bar -->
+    <color name="player_bg">#EE111111</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+</resources>

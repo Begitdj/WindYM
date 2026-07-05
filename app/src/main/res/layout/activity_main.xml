@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Fragment container -->
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Mini player bar -->
+        <FrameLayout
+            android:id="@+id/playerBar"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:visibility="gone"
+            android:background="#222222">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:background="@color/bg_secondary">
+
+                <!-- Cover art -->
+                <FrameLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="#000000">
+
+                    <ImageView
+                        android:id="@+id/playerCover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Cover" />
+                </FrameLayout>
+
+                <!-- Track info -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="12dp">
+
+                    <TextView
+                        android:id="@+id/playerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_primary"
+                        android:maxLines="1"
+                        android:ellipsize="marquee"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:scrollHorizontally="true" />
+
+                    <TextView
+                        android:id="@+id/playerArtist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_secondary"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+                </LinearLayout>
+
+                <!-- Controls -->
+                <ImageButton
+                    android:id="@+id/playerPrev"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/text_secondary"
+                    android:contentDescription="Previous" />
+
+                <ImageButton
+                    android:id="@+id/playerPlayPause"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/brand_red"
+                    android:layout_marginHorizontal="4dp"
+                    android:contentDescription="Play/Pause" />
+
+                <ImageButton
+                    android:id="@+id/playerNext"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_media_next"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/text_secondary"
+                    android:contentDescription="Next" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Bottom Navigation Holo style -->
+        <LinearLayout
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="#111111"
+            android:weightSum="3">
+            
+            <Button
+                android:id="@+id/navSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Поиск"
+                android:textSize="12sp"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/text_primary" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#333333"/>
+                
+            <Button
+                android:id="@+id/navFavorites"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Мои треки"
+                android:textSize="12sp"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/text_primary" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#333333"/>
+                
+            <Button
+                android:id="@+id/navWave"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Моя Волна"
+                android:textSize="12sp"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
