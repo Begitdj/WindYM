@@ -41,7 +41,7 @@ jobs:
         rm app/build/outputs/apk/release/app-release-unsigned.apk
 
     - name: Upload APK Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v6
       with:
         name: WindYM-Release
         path: app/build/outputs/apk/release/*.apk
