@@ -36,6 +36,7 @@ jobs:
         alias: ${{ secrets.KEY_ALIAS }}
         keyStorePassword: ${{ secrets.STORE_PASSWORD }}
         keyPassword: ${{ secrets.KEY_PASSWORD }}
+        buildToolsVersion: 34.0.0
       # Этот шаг пропустится, если секреты не настроены, и будет использована тестовая подпись
 
     - name: Upload APK Artifact
